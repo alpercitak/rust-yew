@@ -1,0 +1,9 @@
+services:
+  rust-yew:
+    build: 
+      context: .
+      dockerfile: Dockerfile
+      target: deploy
+    ports:
+      - "8080:80"
+    restart: unless-stopped
